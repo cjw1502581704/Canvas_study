@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    canvas {
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+<body>
+<canvas width="600" height="400"></canvas>
+<script>
+var myCanvas = document.querySelector('canvas')
+var ctx = myCanvas.getContext('2d')
+var canvasW = ctx.canvas.width
+var canvasH = ctx.canvas.height
+for (i = 1; i <= canvasW / 10; i++) {
+  ctx.moveTo(10 * i + 0.5, 0)
+  ctx.lineTo(10 * i + 0.5, 400)
+  ctx.stroke()
+}
+for (i = 1; i <= canvasH / 10; i++) {
+  ctx.moveTo(0, 10 * i + 0.5)
+  ctx.lineTo(600, 10 * i + 0.5)
+  ctx.stroke()
+}
+
+
+</script>
+</body>
+</html>
